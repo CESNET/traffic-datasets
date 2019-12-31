@@ -1,0 +1,17 @@
+Port 2222
+ListenAddress 0.0.0.0
+HostKey /etc/ssh/ssh_host_rsa_key
+#HostKey /etc/ssh/ssh_host_dsa_key
+HostKey /etc/ssh/ssh_host_ecdsa_key
+HostKey /etc/ssh/ssh_host_ed25519_key
+SyslogFacility DAEMON
+LogLevel DEBUG2
+PasswordAuthentication yes
+PermitEmptyPasswords no
+ChallengeResponseAuthentication no
+GSSAPIAuthentication yes
+GSSAPICleanupCredentials no
+UsePAM yes
+UseDNS no
+DenyUsers *
+

@@ -1,0 +1,8 @@
+[ssh-iptables]
+
+enabled  = true
+filter   = sshd
+action   = iptables-honeypot[name=SSHhoney, port=ssh, protocol=tcp, destip=, destport=2222]
+           f2b-warden[name=SSH, port=ssh, protocol=tcp, wardenpath=/home/shared/warden/]
+logpath  = /var/log/secure
+maxretry = 3
