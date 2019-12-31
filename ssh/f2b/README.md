@@ -15,7 +15,7 @@ and the new server can be started as follows:
 
 Copy `iptables-honeypot.conf` into `/etc/fail2ban/actions.d/`.
 
-Example of `/etc/fail2ban/jail.conf`, you can change parameters of
+Example of `/etc/fail2ban/jail.local`, you can change parameters of
 `iptables-honeypot` as you need.
 
 ```
@@ -39,7 +39,7 @@ permission.
 
 Copy `f2b-warden.conf` into `/etc/fail2ban/actions.d/`.
 
-Example of `/etc/fail2ban/jail.conf`:
+Example of `/etc/fail2ban/jail.local`:
 
 ```
 [ssh-iptables]
@@ -56,7 +56,7 @@ Note: `wardenpath` must exist - create the directory or change the value to exis
 c) Note
 -------
 
-The parameter `action` can contain multiple lines in jail.conf.
-The example of both actions is in the [jail.conf](jail.conf).
+The parameter `action` can contain multiple lines in `jail.local`.
+The example of both actions is in the [jail.local](jail.local).
 
 
