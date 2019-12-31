@@ -46,10 +46,12 @@ Example of `/etc/fail2ban/jail.conf`:
 
 enabled  = true
 filter   = sshd
-action   = iptables-honeypot[name=SSHhoney, port=ssh, protocol=tcp, destip=, destport=2222]
+action   = f2b-warden[name=SSH, port=ssh, protocol=tcp, wardenpath=/home/shared/warden/]
 logpath  = /var/log/secure
 maxretry = 3
 ```
+
+Note: `wardenpath` must exist - create the directory or change the value to existing path.
 
 c) Note
 -------
